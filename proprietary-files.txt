@@ -464,6 +464,10 @@ vendor/lib64/sensors.mius.proximity.so
 vendor/lib64/sensors.ssc.so
 vendor/lib64/sensors.touch.so
 
+# Thermal
+vendor/bin/mi_thermald
+vendor/etc/init/init.mi_thermald.rc
+
 # Thermal config
 vendor/etc/thermal-camera.conf
 vendor/etc/thermal-class0.conf
