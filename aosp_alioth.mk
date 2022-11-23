@@ -9,7 +9,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common VoidUI stuff.
+# Inherit some common Common stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Inherit Google Pixel Carrier Settings
@@ -19,7 +19,7 @@ TARGET_INCLUDE_CARRIER_SETTINGS := true
 TARGET_INCLUDE_WIFI_EXT := true
 TARGET_BOOT_ANIMATION_RES := 1440
 
-# VoidUI Environment Flags
+# Environment Flags
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := true
@@ -28,6 +28,11 @@ TARGET_USES_MINI_GAPPS := false
 
 # OFFFICIAL Flags
 CUSTOM_BUILD_TYPE := OFFICIAL
+
+# PixelLauncher Mod
+$(call inherit-product, vendor/PixelLauncher/PixelLauncher.mk)
+ICONS_VARIANT := true
+PIXEL_LAUNCHER_VARIANT := nomod
 
 # Inherit from alioth device
 $(call inherit-product, device/xiaomi/alioth/device.mk)
